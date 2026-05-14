@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.5.2
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: admin@opensciencelab.asf.alaska.edu
+author_name: OpenScienceLab
+has_ai_rules: false
+has_binder: true
+has_settings: false
+kind: frontend
+labextension_name: opensciencelab-tours
+project_short_description: Tours for OpenScienceLab
+python_name: opensciencelab_tours
+repository: https://github.com/ASFOpenSARlab/opensciencelab-tours
+test: false
+
