@@ -44,94 +44,97 @@ const plugin: JupyterFrontEndPlugin<void> = {
             "showProgress": false
         });
 
-        // tour.addStep({
-        //     "content": "The JupyterLab top bar contains helpful menus, tools, and information for your OpenSARLab session.",
-        //     "target": "#jp-top-panel",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "top",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "The JupyterLab top bar contains helpful menus, tools, and information for your OpenSARLab session.",
+            "target": "#jp-top-panel",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "top",
+            "showProgress": false
+        });
 
-        // tour.addStep({
-        //     "content": "The latest changes for your notebooks and other repositories can be pulled here.",
-        //     "target": "#nbgitpuller-jl-interface-update-btn",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "top",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "The latest changes for your notebooks and other repositories can be pulled here.",
+            "target": "#nbgitpuller-jl-interface-update-btn",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "top",
+            "showProgress": false
+        });
 
-        // tour.addStep({
-        //     "content": "This shows how much storage space has been used on your server. If this reaches 100%, your server may become inoperable.",
-        //     "target": "#opensarlab-diskspace-widget",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "top",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "This shows how much storage space has been used on your server. If this reaches 100%, your server may become inoperable.",
+            "target": "#opensarlab-diskspace-widget",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "top",
+            "showProgress": false
+        });
 
-        // tour.addStep({
-        //     "content": "You can logout and shutdown your server here. Shutting down your server when not in use reduces OpenSARLab spending and allows us to support more users.",
-        //     "target": "#opensarlab-controlbtn",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "top",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "You can logout and shutdown your server here. Shutting down your server when not in use reduces OpenSARLab spending and allows us to support more users.",
+            "target": "#opensarlab-controlbtn",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "top",
+            "showProgress": false
+        });
 
-        // tour.addStep({
-        //     "content": "This allows you to capture a GIF of your screen. Use this tool to record an issue when submitting a support request to the OpenScienceLab admin.",
-        //     "target": "#opensarlab-frontend-gitcap-btn",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "top",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "This allows you to capture a GIF of your screen. Use this tool to record an issue when submitting a support request to the OpenScienceLab admin.",
+            "target": "#opensarlab-frontend-gitcap-btn",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "top",
+            "showProgress": false
+        });
 
-        // tour.addStep({
-        //     "content": "You can find further documentation here.",
-        //     "target": "#opensarlab-doc-link-widget",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "top",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "You can find further documentation here.",
+            "target": "#opensarlab-doc-link-widget",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "top",
+            "showProgress": false
+        });
 
-        // tour.addStep({
-        //     "content": "You can navigate your Jupyter Notebooks through the file browser. Follow the navigation directions to continue the tour.",
-        //     "target": "#main",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "center",
-        //     "showProgress": false
-        // });
+        tour.addStep({
+            "content": "You can navigate your Jupyter Notebooks through the file browser. Follow the navigation directions to continue the tour.",
+            "target": "#main",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "center",
+            "showProgress": false,
+                "data":{
+                    "nextCommand": "filebrowser:activate"
+                }
+        });
 
-        // tour.addStep({
-        //     "content": "Click here to toggle your file browser. After the file browser is open, click the Next button",
-        //     "target": "[title^='File Browser']",
-        //     "disableBeacon": false,
-        //     "disableOverlay": false,
-        //     "disableOverlayClose": true,
-        //     "locale": {},
-        //     "placement": "right",
-        //     "showProgress": false,
-        //     "spotlightClicks": true
-        // });
+        tour.addStep({
+            "content": "This is your file browser. The next few steps will go over some of the folders present in your file system.",
+            "target": ".lm-Widget.lm-Panel.jp-FileBrowser-Panel",
+            "disableBeacon": false,
+            "disableOverlay": false,
+            "disableOverlayClose": true,
+            "locale": {},
+            "placement": "right",
+            "showProgress": false,
+            "spotlightClicks": true
+        });
 
         tour.addStep({
             "content": "Click here to go to your root directory.",
@@ -222,7 +225,12 @@ const plugin: JupyterFrontEndPlugin<void> = {
             "locale": {},
             "placement": "right",
             "showProgress": false,
-            "spotlightClicks": true
+            "spotlightClicks": true,
+            "data":{
+                "clickBlocked": true,
+                "clickTargetElement": ".jp-DirListing-item",
+                "clickType": "dblclick"
+            }
         });
 
         tour.addStep({
@@ -251,24 +259,32 @@ const plugin: JupyterFrontEndPlugin<void> = {
             "locale": {},
             "placement": "right",
             "showProgress": false,
-            "spotlightClicks": true
+            "spotlightClicks": true,
+            "data":{
+                "nextCommand": "terminal:create-new"
+            }
         });
 
         tour.addStep({
             "content": "To delete a folder that is not empty, in a terminal run `rm -rf <Your Folder Path>`",
-            "target": "#main",
+            // "target": "#main",
+            "target": ".lm-Widget.jp-Terminal",
             "disableBeacon": false,
             "disableOverlay": false,
             "disableOverlayClose": true,
             "locale": {},
-            "placement": "center",
+            "placement": "top",
             "showProgress": false,
-            "spotlightClicks": true
+            "spotlightClicks": true,
+            "data":{
+                "nextCommand": "helpmenu:open"
+            }
         });
 
+        // const helpMenuEntry = Array.from(document.querySelectorAll('div')).find(el => el.textContent.trim() === 'Your Text')?.parentElement;
         tour.addStep({
             "content": "You can replay this tour from the Help menu under 'OpenScienceLab Intro'",
-            "target": ".lm-MenuBar-item:last-child",
+            "target": "#jp-mainmenu-help",
             "disableBeacon": false,
             "disableOverlay": false,
             "disableOverlayClose": true,
@@ -277,57 +293,147 @@ const plugin: JupyterFrontEndPlugin<void> = {
             "showProgress": false
         });
 
+        const waitForElement = (selector: string, timeout = 5000): Promise<Element | null> => {
+            return new Promise(resolve => {
+                const elem = document.querySelector(selector);
+                if (elem) return resolve(elem);
+
+                const observer = new MutationObserver(() => {
+                    const el = document.querySelector(selector);
+                    if (el) {
+                        observer.disconnect();
+                        resolve(el);
+                    }
+                });
+
+                observer.observe(document.body, { childList: true, subtree: true });
+
+                setTimeout(() => {
+                    observer.disconnect();
+                    resolve(null);
+                }, timeout);
+            });
+        };
+
 
         tour.stepChanged.connect((_, data) => {
-            console.log("Opensciencelab-tours", data)
+            console.log(data)
+            // Execute requested command
+            // https://jupyterlab.readthedocs.io/en/4.4.x/user/commands.html
+            const stepData = data.step.data as any;
+            if (stepData?.command){
+                // commands.execute(stepData.command)
+
+                // hide the tooltip while command runs
+                const tooltip = document.querySelector('.react-joyride-portal') as HTMLElement;
+                if (tooltip) tooltip.style.visibility = 'hidden';
+
+                commands.execute(stepData.command).then(async () => {
+                    await waitForElement(String(data.step.target), 5000);
+                    if (tooltip) tooltip.style.visibility = 'visible';
+                });
+            }
+
+            // Handle step changing
             switch (data.type) {
                 case 'step:before':
-                    // Open required elements
-                    if (data.step.target === `[title^='File Browser']`) {
-                        commands.execute('filebrowser:activate');
-                    }
-                    // Automatic navigation
-                    const stepData = data.step.data as any;
-                    console.log("Opensciencelab-tours", stepData)
+                    // Wait for required elements
+                    // const nextStep = tour.steps[data.index+1] ?? null;
+                    (async()=>{
+                        await waitForElement(String(data.step.target), 5000);
+                    })();
+
+                    // // Open required elements
+                    // if (data.step.target === `[title^='File Browser']`) {
+                    //     commands.execute('filebrowser:activate');
+                    // }
+
+                    // Get the Next button
+
+                    const nextBtn = document.querySelector(
+                        '[aria-label="Next"][data-action="primary"]'
+                    ) as HTMLElement;
+                    //// Automatic navigation
+                    // Requires step data
+                    // - clickBlocked
+                    // - clickTargetElement
+                    // - clickType (Optional)
+
                     if (stepData?.clickBlocked && stepData?.clickTargetElement) {
                         const target = document.querySelector(stepData.clickTargetElement);
                         console.log("Opensciencelab-tours TARGET", target)
                         if (!target) return;
 
                         // Hide next button
-                        const nextBtn = document.querySelector(
-                            '[aria-label="Next"][data-action="primary"]'
-                        ) as HTMLElement;
                         if(nextBtn){
                             nextBtn.style.display = 'none';
                         }
 
-                        // const handler = () => {
-                        //     target.removeEventListener('click', handler);
-                        //     nextBtn.click();
-                        //     // commands.execute('jupyterlab-tour:next');
-                        //     console.log("Opensciencelab-tours", "Next Clicked")
-                        // };
-
-                        // target.addEventListener('click', handler, { once: true });
-
-
-                        const handler = (e: Event) => {
+                        // Create click listener
+                        const handler = async (e: Event) => {
                             const el = e.target as HTMLElement;
                             if (!el.closest(stepData.clickTargetElement)){
                                 e.stopPropagation();
                                 e.preventDefault();
                                 return;
                             }
-                            
+
+                            // Remove listener
+                            // Must remove on tour exit as well
                             document.removeEventListener(stepData["clickType"] ?? 'click', handler, true);
+
+                            // Execute nextCommand
+                            if(stepData["nextCommand"]){
+                                await commands.execute(stepData.nextCommand)
+                            }
+
+                            // Wait for required elements to populate or timeout
+                            const nextStep = tour.steps[data.index+1] ?? null;
+                            if(nextStep){
+                                const nextSelector = nextStep.target;
+                                await waitForElement(String(nextSelector), 5000)
+                            }
+
+                            // Go to next step
                             nextBtn.click();
-                            console.log("Opensciencelab-tours", "Next Clicked");
                         };
 
-                        // Listen on document with capture=true instead of on the target directly
                         document.addEventListener(stepData["clickType"] ?? 'click', handler, true);
                         
+                    }else if(stepData?.nextCommand){
+                        // Execute nextCommand on next button press
+                        
+                        // Create click listener
+                        const handler = async (e: Event) => {
+                            const el = e.target as HTMLElement;
+                            if (el !== nextBtn){
+                                return;
+                            }
+
+                            e.stopPropagation();
+                            e.preventDefault();
+
+                            // Remove listener
+                            // Must remove on tour exit as well
+                            document.removeEventListener('click', handler, true);
+
+                            // Execute nextCommand
+                            await commands.execute(stepData.nextCommand)
+
+                            // Wait for required elements to populate or timeout
+                            const nextStep = tour.steps[data.index+1] ?? null;
+                            if(nextStep){
+                                const nextSelector = nextStep.target;
+                                console.log(nextSelector)
+                                const el = await waitForElement(String(nextSelector), 5000)
+                                console.log('found', el);
+                            }
+                            // await new Promise(res => setTimeout(res, 300));
+                            nextBtn.click();
+                        };
+
+                        document.addEventListener('click', handler, true);
+
                     }
                 break;
             }
