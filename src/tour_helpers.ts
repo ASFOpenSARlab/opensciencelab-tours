@@ -7,7 +7,9 @@ export function waitForElement(
 ): Promise<Element | null> {
   return new Promise(resolve => {
     const elem = document.querySelector(selector);
-    if (elem) return resolve(elem);
+    if (elem) {
+      return resolve(elem);
+    }
 
     const observer = new MutationObserver(() => {
       const el = document.querySelector(selector);
@@ -59,7 +61,9 @@ export function addTourNavigation(
           // - clickType (Optional)
           const target = document.querySelector(stepData.clickTargetElement);
           console.log('Opensciencelab-tours TARGET', target);
-          if (!target) return;
+          if (!target) {
+            return;
+          }
 
           // Hide next button
           if (nextBtn) {
