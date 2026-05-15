@@ -26,7 +26,7 @@ export function createOpenScienceLabIntroTour(
   }
 
   tour.addStep({
-    content: 'Welcome to OpenSARLab',
+    content: 'Welcome to OpenScienceLab',
     target: '#main',
     disableBeacon: false,
     disableOverlay: false,
