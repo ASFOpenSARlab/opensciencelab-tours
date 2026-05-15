@@ -57,6 +57,24 @@ export function createOpenScienceLabIntroTour(
     disableOverlayClose: true,
     locale: {},
     placement: 'top',
+    showProgress: false,
+    data: {
+      clickBlocked: true,
+      clickTargetElement:
+        '.nbgitpuller-jl-interface-update-btn.jp-ToolbarButtonComponent',
+      clickType: 'click'
+    }
+  });
+
+  tour.addStep({
+    content:
+      'This will continue downloading in the background as we continue the tour.',
+    target: '#nbgitpuller-jl-interface-update-btn',
+    disableBeacon: false,
+    disableOverlay: false,
+    disableOverlayClose: true,
+    locale: {},
+    placement: 'top',
     showProgress: false
   });
 
@@ -136,7 +154,8 @@ export function createOpenScienceLabIntroTour(
   });
 
   tour.addStep({
-    content: 'Click here to go to your root directory.',
+    content:
+      'Click here now to go to your home directory and continue the tour',
     target: '[data-path="/"]',
     disableBeacon: false,
     disableOverlay: false,
@@ -183,7 +202,7 @@ export function createOpenScienceLabIntroTour(
   });
 
   tour.addStep({
-    content: 'Go back to your root directory.',
+    content: 'Go back to your home directory.',
     target: '[data-path="/"]',
     disableBeacon: false,
     disableOverlay: false,
@@ -272,7 +291,6 @@ export function createOpenScienceLabIntroTour(
   tour.addStep({
     content:
       'To delete a folder that is not empty, in a terminal run `rm -rf <Your Folder Path>`',
-    // "target": "#main",
     target: '.lm-Widget.jp-Terminal',
     disableBeacon: false,
     disableOverlay: false,
