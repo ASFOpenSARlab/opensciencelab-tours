@@ -40,9 +40,8 @@ export function addTourNavigation(
 
     // Handle step changing
     switch (data.type) {
-      case 'step:before':
+      case 'step:before': {
         // Wait for required elements
-        // const nextStep = tour.steps[data.index+1] ?? null;
         (async () => {
           await waitForElement(String(data.step.target), 5000);
         })();
@@ -143,6 +142,7 @@ export function addTourNavigation(
           document.addEventListener('click', handler, true);
         }
         break;
+      }
     }
   });
 }
