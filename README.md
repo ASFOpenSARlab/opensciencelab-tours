@@ -3,7 +3,6 @@
 [![Github Actions Status](https://github.com/ASFOpenSARlab/opensciencelab-tours/workflows/Build/badge.svg)](https://github.com/ASFOpenSARlab/opensciencelab-tours/actions/workflows/build.yml)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ASFOpenSARlab/opensciencelab-tours/main?urlpath=lab)
 
-
 Tours for OpenScienceLab
 
 ## Requirements
