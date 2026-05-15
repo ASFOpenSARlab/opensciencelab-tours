@@ -60,7 +60,8 @@ export function createOpenScienceLabIntroTour(
     showProgress: false,
     data: {
       clickBlocked: true,
-      clickTargetElement: '.nbgitpuller-jl-interface-update-btn.jp-ToolbarButtonComponent',
+      clickTargetElement:
+        '.nbgitpuller-jl-interface-update-btn.jp-ToolbarButtonComponent',
       clickType: 'click'
     }
   });
@@ -153,7 +154,8 @@ export function createOpenScienceLabIntroTour(
   });
 
   tour.addStep({
-    content: 'Click here now to go to your home directory and continue the tour',
+    content:
+      'Click here now to go to your home directory and continue the tour',
     target: '[data-path="/"]',
     disableBeacon: false,
     disableOverlay: false,
