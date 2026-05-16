@@ -57,6 +57,7 @@ export function createOpenScienceLabIntroTour(
     disableOverlayClose: true,
     locale: {},
     placement: 'top',
+    spotlightClicks: true,
     showProgress: false,
     data: {
       clickBlocked: true,
