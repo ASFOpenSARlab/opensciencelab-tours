@@ -140,21 +140,6 @@ export function createOpenScienceLabIntroTour(
     }
   });
 
-  // tour.addStep({
-  //   content:
-  //     'You can navigate your Jupyter Notebooks through the file browser. We will explore some of the provided notebooks.',
-  //   target: '#main',
-  //   disableBeacon: false,
-  //   disableOverlay: false,
-  //   disableOverlayClose: true,
-  //   locale: {},
-  //   placement: 'center',
-  //   showProgress: false,
-  //   data: {
-  //     nextCommand: 'filebrowser:activate'
-  //   }
-  // });
-
   tour.addStep({
     content:
       'This is your file browser. The next few steps will go over some of the OpenScienceLab provided folders present in your file system.',
@@ -336,26 +321,9 @@ export function createOpenScienceLabIntroTour(
     showProgress: false,
     spotlightClicks: true,
     data: {
-      nextCommand: 'terminal:create-new'
+      nextCommand: 'helpmenu:open'
     }
   });
-
-  // tour.addStep({
-  //   content: (
-  //     <p>To delete a folder that is not empty, in a terminal run <code><b>rm -rf <Your Folder Path></b></code></p>
-  //   ),
-  //   target: '.lm-Widget.jp-Terminal',
-  //   disableBeacon: false,
-  //   disableOverlay: false,
-  //   disableOverlayClose: true,
-  //   locale: {},
-  //   placement: 'top',
-  //   showProgress: false,
-  //   spotlightClicks: true,
-  //   data: {
-  //     nextCommand: 'helpmenu:open'
-  //   }
-  // });
 
   tour.addStep({
     content: (
