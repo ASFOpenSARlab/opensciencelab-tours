@@ -33,7 +33,6 @@ export function addTourNavigation(
   commands: CommandRegistry
 ): void {
   tour.stepChanged.connect((_, data) => {
-    console.log(data);
     // Execute requested command
     // https://jupyterlab.readthedocs.io/en/4.4.x/user/commands.html
     const stepData = data.step.data as any;
@@ -51,6 +50,12 @@ export function addTourNavigation(
           '[aria-label="Next"][data-action="primary"]'
         ) as HTMLElement;
 
+        // Remove Close button
+        const closeBtn = document.querySelector(
+          '[data-action="close"]'
+        ) as HTMLElement;
+        closeBtn.style.display = 'none';
+
         // Automatic navigation
         if (stepData?.clickBlocked && stepData?.clickTargetElement) {
           // Handle clickBlocked steps
@@ -58,11 +63,6 @@ export function addTourNavigation(
           // - clickBlocked
           // - clickTargetElement
           // - clickType (Optional)
-          const target = document.querySelector(stepData.clickTargetElement);
-          console.log('Opensciencelab-tours TARGET', target);
-          if (!target) {
-            return;
-          }
 
           // Hide next button
           if (nextBtn) {
@@ -72,7 +72,13 @@ export function addTourNavigation(
           // Create click listener
           const handler = async (e: Event) => {
             const el = e.target as HTMLElement;
-            if (!el.closest(stepData.clickTargetElement)) {
+            if (
+              !(
+                el.closest(stepData.clickTargetElement) ||
+                el.matches('[data-action="skip"]') ||
+                el.matches('[data-action="back"]')
+              )
+            ) {
               e.stopPropagation();
               e.preventDefault();
               return;
@@ -85,6 +91,14 @@ export function addTourNavigation(
               handler,
               true
             );
+
+            // If clicked skip or back button, click again without listener
+            if (
+              el.matches('[data-action="skip"]') ||
+              el.matches('[data-action="back"]')
+            ) {
+              el.click();
+            }
 
             // Execute nextCommand
             if (stepData['nextCommand']) {
@@ -114,7 +128,13 @@ export function addTourNavigation(
           // Create click listener
           const handler = async (e: Event) => {
             const el = e.target as HTMLElement;
-            if (el !== nextBtn) {
+            if (
+              !(
+                el === nextBtn ||
+                el.matches('[data-action="skip"]') ||
+                el.matches('[data-action="back"]')
+              )
+            ) {
               return;
             }
 
@@ -125,6 +145,14 @@ export function addTourNavigation(
             // Must remove on tour exit as well
             document.removeEventListener('click', handler, true);
 
+            // If clicked skip or back button, click again without listener
+            if (
+              el.matches('[data-action="skip"]') ||
+              el.matches('[data-action="back"]')
+            ) {
+              el.click();
+            }
+
             // Execute nextCommand
             await commands.execute(stepData.nextCommand);
 
@@ -132,9 +160,7 @@ export function addTourNavigation(
             const nextStep = tour.steps[data.index + 1] ?? null;
             if (nextStep) {
               const nextSelector = nextStep.target;
-              console.log(nextSelector);
-              const el = await waitForElement(String(nextSelector), 5000);
-              console.log('found', el);
+              await waitForElement(String(nextSelector), 5000);
             }
             nextBtn.click();
           };
