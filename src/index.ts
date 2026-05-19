@@ -22,7 +22,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     // Add Notifcation for OpenScienceLab Tour
     Notification.info('New to OpenScienceLab? Take a quick tour!', {
-      autoClose: 30000,
+      autoClose: 9999999999,
       actions: [
         {
           label: 'Start Tour',
@@ -44,7 +44,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     // Launch intro tour if user has not seen it
     app.commands.execute('jupyterlab-tour:launch', {
       id: OPENSCIENCELABINTROID,
-      force: false
+      force: false // Doesn't start the tour ever??
     });
   }
 };
