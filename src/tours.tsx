@@ -51,10 +51,15 @@ export function createOpenScienceLabIntroTour(
 
   tour.addStep({
     content: (
-      <p>The latest changes for your notebooks and other repositories can be pulled here.
+      <p>
+        The latest changes for your notebooks and other repositories can be
+        pulled here.
         <br />
         <br />
-        <b>Click the update button to continue the tour and pull your git repositories.</b>
+        <b>
+          Click the update button to continue the tour and pull your git
+          repositories.
+        </b>
       </p>
     ),
     target: '#nbgitpuller-jl-interface-update-btn',
@@ -199,8 +204,7 @@ export function createOpenScienceLabIntroTour(
   });
 
   tour.addStep({
-    content:
-      'Explore the folders to find available notebooks.',
+    content: 'Explore the folders to find available notebooks.',
     target: '.lm-Widget.lm-Panel.jp-FileBrowser-Panel',
     disableBeacon: false,
     disableOverlay: false,
@@ -232,11 +236,13 @@ export function createOpenScienceLabIntroTour(
     content: (
       <div>
         <p>
-          There are cookbooks of data recipes located within the <code><b>Data_Recipe_Jupyter_Books</b></code> directory.
+          There are cookbooks of data recipes located within the{' '}
+          <code>
+            <b>Data_Recipe_Jupyter_Books</b>
+          </code>{' '}
+          directory.
         </p>
-        <p>
-          Navigate to that directory.
-        </p>
+        <p>Navigate to that directory.</p>
       </div>
     ),
     target: "[title^='Name: Data_Recipe_Jupyter_Books']",
@@ -257,7 +263,13 @@ export function createOpenScienceLabIntroTour(
   tour.addStep({
     content: (
       <div>
-        <p>Here you can find data recipe cookbooks, open a cookbook such as <code><b>opensarlab_MintPy_Recipe_Book</b></code> by double clicking on it before moving on to the next step</p>
+        <p>
+          Here you can find data recipe cookbooks, open a cookbook such as{' '}
+          <code>
+            <b>opensarlab_MintPy_Recipe_Book</b>
+          </code>{' '}
+          by double clicking on it before moving on to the next step
+        </p>
       </div>
     ),
     target: '.lm-Widget.lm-Panel.jp-FileBrowser-Panel',
@@ -277,8 +289,13 @@ export function createOpenScienceLabIntroTour(
 
   tour.addStep({
     content: (
-      <p>You can explore a data recipe cookbook more easily using <code><b>Jupyter-Book Table of Contents</b></code>. Click here to explore.</p>
-      
+      <p>
+        You can explore a data recipe cookbook more easily using{' '}
+        <code>
+          <b>Jupyter-Book Table of Contents</b>
+        </code>
+        . Click here to explore.
+      </p>
     ),
     target: '[title="Jupyter-Book Table of Contents"]',
     disableBeacon: false,
@@ -298,10 +315,16 @@ export function createOpenScienceLabIntroTour(
   tour.addStep({
     content: (
       <div>
-        <p>Here you can see the contents of the cookbook, you can click around to open the data recipes.</p>
+        <p>
+          Here you can see the contents of the cookbook, you can click around to
+          open the data recipes.
+        </p>
         <br />
         <br />
-        <p>Note that if you have not navigated to a Cookbook in the file browser, this will display an error stating that this is "Not a Jupyter-Book".</p>
+        <p>
+          Note that if you have not navigated to a Cookbook in the file browser,
+          this will display an error stating that this is "Not a Jupyter-Book".
+        </p>
       </div>
     ),
     target: "[id='@jupyterlab-sidepanel/jb-toc'",
@@ -336,7 +359,12 @@ export function createOpenScienceLabIntroTour(
 
   tour.addStep({
     content: (
-      <p>You can replay this tour from the Help menu under <code><b>OpenScienceLab Intro</b></code></p>
+      <p>
+        You can replay this tour from the Help menu under{' '}
+        <code>
+          <b>OpenScienceLab Intro</b>
+        </code>
+      </p>
     ),
     target: '#jp-mainmenu-help',
     disableBeacon: false,

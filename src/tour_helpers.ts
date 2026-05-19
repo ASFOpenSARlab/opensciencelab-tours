@@ -73,12 +73,12 @@ export function addTourNavigation(
           const handler = async (e: Event) => {
             const el = e.target as HTMLElement;
             if (
-                !(
-                  el.closest(stepData.clickTargetElement)
-                  || el.matches("[data-action=\"skip\"]")
-                  || el.matches("[data-action=\"back\"]")
-                )
-              ) {
+              !(
+                el.closest(stepData.clickTargetElement) ||
+                el.matches('[data-action="skip"]') ||
+                el.matches('[data-action="back"]')
+              )
+            ) {
               e.stopPropagation();
               e.preventDefault();
               return;
@@ -93,7 +93,10 @@ export function addTourNavigation(
             );
 
             // If clicked skip or back button, click again without listener
-            if (el.matches("[data-action=\"skip\"]") || el.matches("[data-action=\"back\"]")){
+            if (
+              el.matches('[data-action="skip"]') ||
+              el.matches('[data-action="back"]')
+            ) {
               el.click();
             }
 
@@ -126,12 +129,12 @@ export function addTourNavigation(
           const handler = async (e: Event) => {
             const el = e.target as HTMLElement;
             if (
-                !(
-                  el === nextBtn
-                  || el.matches("[data-action=\"skip\"]")
-                  || el.matches("[data-action=\"back\"]")
-                )
-              ) {
+              !(
+                el === nextBtn ||
+                el.matches('[data-action="skip"]') ||
+                el.matches('[data-action="back"]')
+              )
+            ) {
               return;
             }
 
@@ -143,7 +146,10 @@ export function addTourNavigation(
             document.removeEventListener('click', handler, true);
 
             // If clicked skip or back button, click again without listener
-            if (el.matches("[data-action=\"skip\"]") || el.matches("[data-action=\"back\"]")){
+            if (
+              el.matches('[data-action="skip"]') ||
+              el.matches('[data-action="back"]')
+            ) {
               el.click();
             }
 
