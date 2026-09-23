@@ -4,3 +4,5 @@ node_modules
 **/package.json
 !/package.json
 opensciencelab_tours
+eslint.config.mjs
+.venv

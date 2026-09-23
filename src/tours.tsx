@@ -62,7 +62,7 @@ export function createOpenScienceLabIntroTour(
         </b>
       </p>
     ),
-    target: '#nbgitpuller-jl-interface-update-btn',
+    target: '#nbgitpuller-panel',
     disableBeacon: false,
     disableOverlay: false,
     disableOverlayClose: true,
@@ -72,16 +72,35 @@ export function createOpenScienceLabIntroTour(
     showProgress: false,
     data: {
       clickBlocked: true,
-      clickTargetElement:
-        '.nbgitpuller-jl-interface-update-btn.jp-ToolbarButtonComponent',
+      clickTargetElement: '#nbgitpuller-jl-interface-update-btn',
       clickType: 'click'
     }
   });
 
   tour.addStep({
+    content: (
+      <p>
+        You can add more git repositories in the settings.
+        <br />
+        <br />
+        After editing your settings, check the "<i>Reload Widget</i>" checkbox
+        to apply your changes
+      </p>
+    ),
+    target: '#nbgitpuller-jl-interface-settings-btn',
+    disableBeacon: false,
+    disableOverlay: false,
+    disableOverlayClose: true,
+    locale: {},
+    placement: 'top',
+    spotlightClicks: true,
+    showProgress: false
+  });
+
+  tour.addStep({
     content:
       'This will continue downloading in the background as we continue the tour.',
-    target: '#nbgitpuller-jl-interface-update-btn',
+    target: '#nbgitpuller-panel',
     disableBeacon: false,
     disableOverlay: false,
     disableOverlayClose: true,
