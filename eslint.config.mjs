@@ -60,7 +60,15 @@ export default defineConfig([
       ],
       curly: ['error', 'all'],
       eqeqeq: 'error',
-      'prefer-arrow-callback': 'error',
+      'prefer-arrow-callback': 'error'
+    }
+  },
+  {
+    plugins: {
+      i18next,
+    },
+    rules: {
+      // Turn off the untranslated string warning globally
       "react/jsx-no-literals": "off"
     }
   },
