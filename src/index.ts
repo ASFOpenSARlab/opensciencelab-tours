@@ -4,7 +4,6 @@ import {
 } from '@jupyterlab/application';
 import { ITourManager } from 'jupyterlab-tour';
 import { Notification } from '@jupyterlab/apputils';
-import { createOpenScienceLabIntroTour, OPENSCIENCELABINTROID } from './tours';
 /**
  * Initialization data for the opensciencelab-tours extension.
  */
@@ -14,6 +13,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   requires: [ITourManager],
   activate: async (app: JupyterFrontEnd, tourManager: ITourManager) => {
+    const { createOpenScienceLabIntroTour, OPENSCIENCELABINTROID } =
+      await import('./tours');
+
     console.log('JupyterLab extension opensciencelab-tours is activated!');
 
     const { commands } = app;
