@@ -64,12 +64,8 @@ export default defineConfig([
     }
   },
   {
-    plugins: {
-      i18next,
-    },
     rules: {
-      // Turn off the untranslated string warning globally
-      "react/jsx-no-literals": "off"
+      "jupyter/no-untranslated-string": "off"
     }
   },
   prettierRecommended
