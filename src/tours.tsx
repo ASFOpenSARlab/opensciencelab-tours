@@ -80,7 +80,7 @@ export function createOpenScienceLabIntroTour(
   tour.addStep({
     content: (
       <p>
-        You can add more notebook repositories in the settings.
+        You can add more git repositories in the settings.
         <br />
         <br />
         After editing your settings, check the "<i>Reload Widget</i>" checkbox
