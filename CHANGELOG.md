@@ -2,6 +2,25 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.2
+
+([Full Changelog](https://github.com/ASFOpenSARlab/opensciencelab-tours/compare/v0.3.1...155582e11c3b652b032f382cb4089cf252e90bca))
+
+### Enhancements made
+
+- [OSL-4633] Add nbgitpuller settings to tour [#11](https://github.com/ASFOpenSARlab/opensciencelab-tours/pull/11) ([@segallagher](https://github.com/segallagher), [@emlundell](https://github.com/emlundell))
+
+### Contributors to this release
+
+The following people contributed discussions, new ideas, code and documentation contributions, and review.
+See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
+
+([GitHub contributors page for this release](https://github.com/ASFOpenSARlab/opensciencelab-tours/graphs/contributors?from=2026-05-19&to=2026-09-23&type=c))
+
+@emlundell ([activity](https://github.com/search?q=repo%3AASFOpenSARlab%2Fopensciencelab-tours+involves%3Aemlundell+updated%3A2026-05-19..2026-09-23&type=Issues)) | @segallagher ([activity](https://github.com/search?q=repo%3AASFOpenSARlab%2Fopensciencelab-tours+involves%3Asegallagher+updated%3A2026-05-19..2026-09-23&type=Issues))
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.3.1
 
 ([Full Changelog](https://github.com/ASFOpenSARlab/opensciencelab-tours/compare/v0.3.0...a427b86a3cd53c6ec62b57e0a983e06a1c6cd47e))
@@ -18,8 +37,6 @@ See [our definition of contributors](https://github-activity.readthedocs.io/en/l
 ([GitHub contributors page for this release](https://github.com/ASFOpenSARlab/opensciencelab-tours/graphs/contributors?from=2026-05-19&to=2026-05-19&type=c))
 
 @segallagher ([activity](https://github.com/search?q=repo%3AASFOpenSARlab%2Fopensciencelab-tours+involves%3Asegallagher+updated%3A2026-05-19..2026-05-19&type=Issues))
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.3.0
 
