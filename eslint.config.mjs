@@ -60,7 +60,8 @@ export default defineConfig([
       ],
       curly: ['error', 'all'],
       eqeqeq: 'error',
-      'prefer-arrow-callback': 'error'
+      'prefer-arrow-callback': 'error',
+      "react/jsx-no-literals": "off"
     }
   },
   prettierRecommended
