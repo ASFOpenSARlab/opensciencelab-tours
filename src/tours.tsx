@@ -72,8 +72,7 @@ export function createOpenScienceLabIntroTour(
     showProgress: false,
     data: {
       clickBlocked: true,
-      clickTargetElement:
-        '#nbgitpuller-jl-interface-update-btn',
+      clickTargetElement: '#nbgitpuller-jl-interface-update-btn',
       clickType: 'click'
     }
   });
@@ -84,8 +83,8 @@ export function createOpenScienceLabIntroTour(
         You can add more notebook repositories in the settings.
         <br />
         <br />
-        After editing your settings, check the "<i>Reload Widget</i>"
-        checkbox to apply your changes
+        After editing your settings, check the "<i>Reload Widget</i>" checkbox
+        to apply your changes
       </p>
     ),
     target: '#nbgitpuller-jl-interface-settings-btn',
@@ -95,7 +94,7 @@ export function createOpenScienceLabIntroTour(
     locale: {},
     placement: 'top',
     spotlightClicks: true,
-    showProgress: false,
+    showProgress: false
   });
 
   tour.addStep({
